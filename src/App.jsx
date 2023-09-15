@@ -29,8 +29,9 @@ function App() {
     }, 3000)}
   return (
     <div className="setBackground">
+      <NoteState  showAlert={showAlert} >
       <UserState>
-        <NoteState  showAlert={showAlert} >
+        
           <Navbar />
           <Alert alert={alert}/>
           <Routes>
@@ -43,8 +44,9 @@ function App() {
             <Route exact path="/signup" element={<Signup  showAlert={showAlert} />}/>
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </UserState>
         </NoteState>
-      </UserState>
+
     </div>
   );
 }
