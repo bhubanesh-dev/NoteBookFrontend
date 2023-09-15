@@ -1,7 +1,7 @@
 import React from "react";
 import host from "../Serverlink";
 
-import {useNavigate} from "react-router-dom";
+import {useNavigate,Link} from "react-router-dom";
 
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
@@ -31,11 +31,32 @@ const Signup = (props) => {
       body: JSON.stringify({ name, email, phone, password, cpassword }),
     });
     const msg = await response.json();
-    Navigate("/")
+   
+
+
+    if(response.status === 403 || !msg){
+      props.showAlert(
+        "invalid credentials ",
+        "danger"
+      );
+    }else if (response.status === 422) {
+      props.showAlert("email already exist ", "warning");
+    }
+
+   else if (response.status === 201 || msg) {
+      props.showAlert("you are registered successfully", "success");
+      
+      Navigate("/signin");
+    } else if (response.status === 500) {
+      props.showAlert(
+        "something went wrong from our side , please report us ",
+        "danger"
+      );
+    } 
   };
   return (
     <>
-      <div className="cointainer-fluid">
+      <div className="cointainer-fluid setCointainer">
         <div className="row">
           <div className="col-12 col-md-4 mx-auto">
             <div className="card flex-row my-3 glassmorphism">
@@ -149,12 +170,12 @@ const Signup = (props) => {
                     </button>
                   </div>
 
-                  <a
+                  <Link
                     className="d-block text-center mt-2  text-dark text-decoration-none fw-medium"
-                    href="/signin"
+                    to="/signin"
                   >
                     Have an account?<span className="fw-bold"> Sign In</span>{" "}
-                  </a>
+                  </Link>
                 </form>
               </div>
             </div>

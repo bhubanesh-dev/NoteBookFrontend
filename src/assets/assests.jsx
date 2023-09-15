@@ -1,3 +1,4 @@
-import reactLogo from './assets/react.svg'
 
-export {reactLogo};
+import blankprofile from './blank.png'
+
+export {blankprofile};
