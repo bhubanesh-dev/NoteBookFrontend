@@ -14,7 +14,7 @@ import Signup from "./componets/Signup";
 
 import { Route, Routes } from "react-router-dom";
 import Alert from "./componets/Alert";
-import UserState from "./context/user/UserState";
+import UserState from "./context/user/userState";
 import NoteState from "./context/note/noteState";
 
 function App() {
