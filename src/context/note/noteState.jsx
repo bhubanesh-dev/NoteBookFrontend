@@ -1,9 +1,9 @@
 import NoteContext from "./noteContext";
 import { useState } from "react";
-import host from "../Serverlink";
+
 
 const NoteState = (props) => {
-
+  const host = "https://nodecraftserver.onrender.com"; 
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
 
