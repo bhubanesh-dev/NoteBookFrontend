@@ -13,7 +13,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.46.1",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.15.0",
+    "react-spinner": "^0.2.7",
+    "react-spinners": "^0.13.8"
   },
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",
