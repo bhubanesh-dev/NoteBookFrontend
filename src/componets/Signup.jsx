@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
+
 
 import HashLoader from "react-spinners/HashLoader"; 
 
@@ -201,7 +201,7 @@ const Signup = (props) => {
               </div>
             </div>
           </div>
-          <DevTool control={control} />
+          {/* <DevTool control={control} /> */}
         </>
       )}
     </>
