@@ -161,7 +161,7 @@ const About = () => {
                     aria-expanded="false"
                     aria-controls="collapse6"
                   >
-                    Open Source, Open Possibilities:
+                    Source code 
                   </button>
                 </h2>
                 <div
@@ -170,11 +170,7 @@ const About = () => {
                   data-bs-parent="#accordionExample"
                 >
                   <div class="accordion-body  ">
-                    <strong> At NoteCraft,</strong>we believe in the power of
-                    collaboration and openness. That's why we're proud to
-                    announce that NoteCraft is an open-source project. Our
-                    source code is freely available for you to use, modify, and
-                    contribute to.
+                    
                 
                     <div className="cointainer-fluid">
                       <strong> Source code for backend:</strong>
